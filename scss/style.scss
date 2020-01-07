@@ -1,0 +1,150 @@
+@import "mixin";
+@import "variables";
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text:400i|Montserrat:700,900&display=swap');
+*{
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.wrapper{
+    max-width: 2000px;
+    margin: 0 auto;
+}
+.header{
+    @include flex (column, space-between, space-between);
+    background: #151B28;
+    padding: 4% 4.5% 4.5% 4.5%;
+        .header__menu{
+            @include flex (null, space-between, center);
+                .menu__links{
+                    @include flex (null, space-between, center);
+                        .links__item{
+                            margin: 0 0 0 65px;
+                            text-align: center;
+                            .link{
+                                color: #ffffff;
+                                font-family: Montserrat;
+                                font-size: 16px;
+                                font-weight: 700;
+                                line-height: 36px;
+                            }
+                        }
+                }
+        }
+        .header__slider{
+            @include flex (column, space-between, center);
+            margin-top: 100px;
+            flex-wrap: wrap;
+                .slider__top{
+                    @include flex (null, space-between, center);
+                    width: 100%;
+                    .slider__slide{
+                        height: 540px;
+                        position: relative;
+                        .slide__text{
+                            @include flex (column, space-between, center);
+                            padding: 0;
+                            width: 815px;
+                            height: 100%;
+                                .text__item{
+                                    width: 75%;
+                                    height: 130px;
+                                    .text{
+                                        text-align: center;
+                                        margin: 0;
+                                        text-shadow: 0 0 55px #000;
+                                        color: #151B29;
+                                        font-family: 'Montserrat';
+                                        font-weight: 900;
+                                        font-size: 88px;
+                                        line-height: 101.66px;
+                                        text-transform: uppercase;
+                                    }
+                                }
+                                .center__text{
+                                    width: 100%;
+                                    display: flex;
+                                    justify-content: space-between;
+                                        .text{
+                                            font-size: 133px;
+                                        }
+                                }
+                        }
+                        .slide__img{
+                            position: absolute;
+                            top: 0;
+                            z-index: 999;
+                            display: flex;
+                            justify-content: center;
+                            align-items: flex-start;
+                            width: 100%;
+                                .img{
+                                    margin-top: 3.5%;
+                                    margin-left: 2%;
+                                    width: 60%;
+                                }
+                        }
+                    }
+            }
+            .slider__bottom{
+                position: relative;
+                @include flex (null, space-between, flex-end);
+                width: 100%;
+                margin-top: 2%;
+                    .slider__indication{
+                        margin: -130px 0 0 0;
+                        padding: 0;
+                        width: 67px;
+                        height: 200px;
+                            .indicatin__item{
+                                height: 74px;
+                                display: flex;
+                                align-items: center;
+                                .item__link{
+                                    width: 100%;
+                                    color: $white;
+                                    font-family: Montserrat;
+                                    font-size: 16px;
+                                    font-weight: 700;
+                                    height: 30px;
+                                        &.active{
+                                            color: $gold;
+                                            border-bottom: 1px solid $gold;
+                                        }
+                                }
+                            }
+                    }
+                    .scroll{
+                        margin-left: 10%;
+                        text-align: center;
+                        .scroll__text{
+                            color: #485471;
+                            font-family: "Crimson Text";
+                            font-size: 24px;
+                            font-style: italic;
+                            line-height: 36px;
+                        }
+                    }
+                    .slider__buy{
+                        @include flex (null, center, center);
+                        padding: 12px 15px;
+                        border: 1px solid #263045;
+                        color: $gold;
+                        font-family: Montserrat;
+                        font-size: 16px;
+                        font-weight: 700;
+                        line-height: 36px;
+                        text-transform: uppercase;
+                        letter-spacing: 0.4px;
+                    }
+            }
+    }    
+}
