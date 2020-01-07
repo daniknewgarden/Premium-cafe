@@ -144,7 +144,177 @@ body{
                         line-height: 36px;
                         text-transform: uppercase;
                         letter-spacing: 0.4px;
+                        transition: .7s all;
+                            &:hover{
+                                color: #151B28;
+                                background: $gold;
+                            }
                     }
             }
     }    
+}
+.main{   
+    .perfection{
+        @include flex (column, space-between, center);
+        height: 1250px;
+        padding: 5% 0px 85px 0;
+            .perfection__title{
+                text-align: center;
+                    .title{
+                        margin: 0;
+                        color: #151b28;
+                        font-family: Montserrat;
+                        font-size: 48px;
+                        font-weight: 700;
+                        line-height: 84.35px;
+                        text-transform: uppercase;
+                    }
+                    .title__text{
+                        margin: 0;
+                        color: #8b909d;
+                        font-family: "Crimson Text";
+                        font-size: 24px;
+                        font-style: italic;
+                        line-height: 30px;
+                    }
+            }
+            .perfection__dishes{
+                width: 100%;
+                @include flex (null, space-between, center);
+                .dishes__item{
+                    transition: .3s all;
+                    position: relative;
+                    @include flex (column, center, center);
+                    width: 33.33%;
+                    height: 490px;
+                        &.first{
+                            background: url(../images/Desert.png) no-repeat;
+                            background-size: 100% 100%;
+                        }
+                        &.second{
+                            background: url(../images/Smoothies.png) no-repeat;
+                            background-size: 100% 100%;
+                        }
+                        &.third{
+                            background: url(../images/Breakfast.png) no-repeat;
+                            background-size: 100% 100%;
+                        }
+                        &:before {
+                        transition: .9s all;
+                        content:"";
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        top: 0;
+                        left:0;
+                        background: rgba(0, 0, 0, 0.705);
+                        opacity: 0.5;
+                    }
+                        &:hover{
+                            width: 570px;
+                            height: 690px;
+                                .item__title{
+                                    color: #151B29;
+                                }
+                                .item__line{
+                                    color: #fff;
+                                }
+                                .item__text{
+                                    color: #8b909d;
+                                    
+                                }
+                        &:before {
+                            background: rgba(0, 0, 0, 0);
+                        }
+                        }
+                        .item__title{
+                            z-index: 2;
+                            color: $gold;
+                            font-family: Montserrat;
+                            font-size: 48px;
+                            font-weight: 700;
+                            line-height: 84.35px;
+                            text-transform: uppercase;
+                            letter-spacing: 1.02px;
+                        }
+                        .item__line{
+                            z-index: 2;
+                            width: 45px;
+                            height: 1px;
+                            background-color: $gold;
+                        }
+                        .item__text{
+                            z-index: 2;
+                            color: $white;
+                            font-family: "Crimson Text";
+                            font-size: 24px;
+                            font-style: italic;
+                            line-height: 36px;
+                        }
+                }
+            }
+            .perfection__link {
+                color: $gold;
+                border-bottom: 2px solid $gold;
+                font-family: Montserrat;
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 40px;
+                text-transform: uppercase;
+                letter-spacing: 0.58px;
+                width: 240px;
+                text-align: center;
+                transition: .9s all;
+                    &:hover{
+                        width: 300px;
+                        border: 2px solid $gold;
+                    }
+            }
+    }
+    .details{
+        @include flex (null, center, center);
+        background: url(../images/Details-background.png);
+        height: 708px;
+            .details__container{
+                background: #fff;
+                width: 775px;
+                height: 430px;
+                padding: 40px;
+                    .details__content{
+                        @include flex (column, center, center);
+                        border: 1px solid #8a8f9c;
+                        width: 100%;
+                        height: 100%;
+                        .content__title {
+                            margin: 0;
+                            color: #151b28;
+                            font-family: Montserrat;
+                            font-size: 48px;
+                            font-weight: 700;
+                            line-height: 84.35px;
+                            text-transform: uppercase;
+                        }
+
+                        .content__text {
+                            margin: 50px 0;
+                            color: #8b909d;
+                            font-family: "Crimson Text";
+                            font-size: 24px;
+                            font-style: italic;
+                            line-height: 30px;
+                        }
+                        .content__link{
+                            color: $gold;
+                            font-family: Montserrat;
+                            font-size: 16px;
+                            font-weight: 700;
+                            line-height: 36px;
+                            text-transform: uppercase;
+                            letter-spacing: 0.4px;
+                            padding: 10px 15px;
+                            border: 1px solid rgba(21, 27, 40, 0.15);
+                        }
+                    }
+            }
+    }
 }
